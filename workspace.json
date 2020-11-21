@@ -71,6 +71,27 @@
           }
         }
       }
+    },
+    "nest-importer-profiles": {
+      "root": "libs/nest-importer/profiles",
+      "sourceRoot": "libs/nest-importer/profiles/src",
+      "projectType": "library",
+      "schematics": {},
+      "architect": {
+        "lint": {
+          "builder": "@nrwl/linter:eslint",
+          "options": {
+            "lintFilePatterns": ["libs/nest-importer/profiles/**/*.ts"]
+          }
+        },
+        "test": {
+          "builder": "@nrwl/jest:jest",
+          "options": {
+            "jestConfig": "libs/nest-importer/profiles/jest.config.js",
+            "passWithNoTests": true
+          }
+        }
+      }
     }
   },
   "cli": {

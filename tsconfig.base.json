@@ -18,6 +18,9 @@
     "paths": {
       "@homefunds/nest-importer/sources": [
         "libs/nest-importer/sources/src/index.ts"
+      ],
+      "@homefunds/nest-importer/profiles": [
+        "libs/nest-importer/profiles/src/index.ts"
       ]
     }
   },

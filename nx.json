@@ -28,6 +28,9 @@
     },
     "nest-importer-sources": {
       "tags": []
+    },
+    "nest-importer-profiles": {
+      "tags": []
     }
   }
 }
