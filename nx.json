@@ -25,6 +25,9 @@
   "projects": {
     "nest-importer-app": {
       "tags": []
+    },
+    "nest-importer-sources": {
+      "tags": []
     }
   }
 }

@@ -15,7 +15,11 @@
     "skipLibCheck": true,
     "skipDefaultLibCheck": true,
     "baseUrl": ".",
-    "paths": {}
+    "paths": {
+      "@homefunds/nest-importer/sources": [
+        "libs/nest-importer/sources/src/index.ts"
+      ]
+    }
   },
   "exclude": ["node_modules", "tmp"]
 }
