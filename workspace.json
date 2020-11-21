@@ -1,0 +1,59 @@
+{
+  "version": 1,
+  "projects": {
+    "nest-importer-app": {
+      "root": "apps/nest-importer-app",
+      "sourceRoot": "apps/nest-importer-app/src",
+      "projectType": "application",
+      "prefix": "nest-importer-app",
+      "schematics": {},
+      "architect": {
+        "build": {
+          "builder": "@nrwl/node:build",
+          "options": {
+            "outputPath": "dist/apps/nest-importer-app",
+            "main": "apps/nest-importer-app/src/main.ts",
+            "tsConfig": "apps/nest-importer-app/tsconfig.app.json",
+            "assets": ["apps/nest-importer-app/src/assets"]
+          },
+          "configurations": {
+            "production": {
+              "optimization": true,
+              "extractLicenses": true,
+              "inspect": false,
+              "fileReplacements": [
+                {
+                  "replace": "apps/nest-importer-app/src/environments/environment.ts",
+                  "with": "apps/nest-importer-app/src/environments/environment.prod.ts"
+                }
+              ]
+            }
+          }
+        },
+        "serve": {
+          "builder": "@nrwl/node:execute",
+          "options": {
+            "buildTarget": "nest-importer-app:build"
+          }
+        },
+        "lint": {
+          "builder": "@nrwl/linter:eslint",
+          "options": {
+            "lintFilePatterns": ["apps/nest-importer-app/**/*.ts"]
+          }
+        },
+        "test": {
+          "builder": "@nrwl/jest:jest",
+          "options": {
+            "jestConfig": "apps/nest-importer-app/jest.config.js",
+            "passWithNoTests": true
+          }
+        }
+      }
+    }
+  },
+  "cli": {
+    "defaultCollection": "@nrwl/nest"
+  },
+  "defaultProject": "nest-importer-app"
+}
